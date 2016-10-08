@@ -1,11 +1,12 @@
-getRabbit < - function(x,y,n,m){
-  sum <- 0
-  while(m > 0){
-    sum <- x*n + y
-    m <- m - 1
-    x <- y
-    y <- x * n
+getRabbit <- function(x,y,n,m){
+  sum <- x + y
+  i <- 0
+  while(i < m){
+     y <- x * 3
+     sum <- sum + y
+     x <- x + y
+     i <- i + 1
   }
- return (sum)
+  print (sum)
 }
-getRabbit(1,1,3,5)
+getRabbit(1,1,3,2)
